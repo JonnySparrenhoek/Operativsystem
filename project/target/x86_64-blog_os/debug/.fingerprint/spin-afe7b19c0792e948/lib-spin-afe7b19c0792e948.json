@@ -1,0 +1,1 @@
+{"rustc":4215773149422266048,"features":"[\"asm\", \"const_fn\", \"core_intrinsics\", \"default\", \"once\", \"unstable\"]","target":4671472694174328860,"profile":731176819336294830,"deps":[],"local":[{"Precalculated":"0.4.6"}],"rustflags":["--sysroot","/root/.xargo"]}

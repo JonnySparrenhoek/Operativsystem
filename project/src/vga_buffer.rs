@@ -118,7 +118,7 @@ impl Writer {
     }
 }
 
-pub fn print_something() {
+/*pub fn print_something() {
 	use core::fmt::Write;
 	let mut writer = Writer {
         	column_position: 0,
@@ -128,8 +128,8 @@ pub fn print_something() {
 
 	writer.write_byte(b'H');
 	writer.write_str("ello! ");
-	write!(writer, "Jag gillar chokladbollar!");
-}
+	write!(writer, "hejhej!");
+}*/
 
 impl fmt::Write for Writer {
     fn write_str(&mut self, s: &str) -> fmt::Result {
