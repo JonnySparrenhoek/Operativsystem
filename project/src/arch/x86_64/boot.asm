@@ -6,7 +6,7 @@ bits 32
 start:
     mov esp, stack_top
     mov edi, ebx       ; Move Multiboot info pointer to edi
-    mov esp, stack_top
+    ;mov esp, stack_top
 
     call check_multiboot
     call check_cpuid
@@ -165,7 +165,7 @@ stack_top:
 section .rodata
 gdt64:
     dq 0 ; zero entry
-    dq (1<<43) | (1<<44) | (1<<47) | (1<<53) ; code segment
+    dq (1<<43) | (1<<44) | (1<<47) | (1<<53) ; onödvändig??
 .code: equ $ - gdt64 ; new
     dq (1<<43) | (1<<44) | (1<<47) | (1<<53) ; code segment
 .pointer:

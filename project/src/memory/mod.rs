@@ -1,6 +1,7 @@
 pub use self::area_frame_allocator::AreaFrameAllocator; // från git
 pub use self::paging::test_paging;
 use self::paging::PhysicalAddress;
+pub use self::paging::remap_the_kernel;
 
 mod area_frame_allocator;
 mod paging;
@@ -20,6 +21,10 @@ impl Frame {
 
     fn start_address(&self) -> PhysicalAddress {
         self.number * PAGE_SIZE
+    }
+
+    fn clone(&self) -> Frame {
+        Frame { number: self.number }
     }
 
 }
